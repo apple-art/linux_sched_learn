@@ -3,3 +3,6 @@ linux-6.6/
 linux-6.6.old/
 linux-6.6.tar.xz
 sha256sums.asc
+
+# Full Android MSM checkout is a local reference repository; do not nest it.
+android-msm-walt-reference/
