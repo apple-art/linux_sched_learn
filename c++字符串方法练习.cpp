@@ -1,6 +1,9 @@
 #include <algorithm>
 #include <iostream>
+#include <queue>
+#include <stack>
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -66,6 +69,32 @@ int main() {
          << (filename.compare(0, prefix.size(), prefix) == 0) << '\n';
     cout << "前 3 个字符是否等于 cpp: "
          << (filename.compare(0, 3, "cpp") == 0) << '\n';
+
+    // vector 中使用 replace：把所有 2 替换成 9
+    vector<int> numbers = {1, 2, 3, 2, 4};
+    replace(numbers.begin(), numbers.end(), 2, 9);
+    cout << "vector 替换后: ";
+    for (int number : numbers) {
+        cout << number << ' ';
+    }
+    cout << '\n';
+
+    // stack：后进先出
+    stack<int> st;
+    st.push(10);
+    st.push(20);
+    cout << "stack 栈顶: " << st.top() << '\n';
+    st.pop();
+    cout << "stack 出栈后栈顶: " << st.top() << '\n';
+
+    // queue：先进先出
+    queue<int> q;
+    q.push(10);
+    q.push(20);
+    cout << "queue 队首: " << q.front() << '\n';
+    cout << "queue 队尾: " << q.back() << '\n';
+    q.pop();
+    cout << "queue 出队后队首: " << q.front() << '\n';
 
     return 0;
 }
