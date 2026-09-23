@@ -1,1 +1,86 @@
+<mxfile host="Electron" modified="2026-09-18T00:00:00.000Z" agent="Codex" version="24.7.17">
+  <diagram id="walt-demand-aggregation" name="Page-1">
+    <mxGraphModel dx="1500" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
 
+        <mxCell id="title" value="WALT：相关线程组负载如何聚合给调频 governor" style="text;html=1;align=center;verticalAlign=middle;fontSize=26;fontStyle=1;fontFamily=Microsoft YaHei;fontColor=#1F2937;" vertex="1" parent="1">
+          <mxGeometry x="260" y="30" width="1080" height="45" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="step1" value="① 窗口 M 结束时的原始统计（Cluster0：CPU0–CPU3）" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=16;fontSize=18;fontStyle=1;fontFamily=Microsoft YaHei;fillColor=#F3F4F6;strokeColor=#6B7280;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="105" width="650" height="55" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="cpu0" value="CPU0" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=12;fontSize=20;fontStyle=1;fontFamily=Microsoft YaHei;fillColor=#FFFFFF;strokeColor=#64748B;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="180" width="145" height="210" as="geometry"/>
+        </mxCell>
+        <mxCell id="cpu0c" value="普通任务 B0&lt;br&gt;&lt;b&gt;C0.prev = 1ms&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=15;fontFamily=Microsoft YaHei;fillColor=#DBEAFE;strokeColor=#3B82F6;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="72" y="230" width="121" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="cpu0a" value="线程组 A：A0&lt;br&gt;&lt;b&gt;A[0].prev = 5ms&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=15;fontFamily=Microsoft YaHei;fillColor=#FFEDD5;strokeColor=#F97316;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="72" y="310" width="121" height="62" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="cpu1" value="CPU1" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=top;spacingTop=12;fontSize=20;fontStyle=1;fontFamily=Microsoft YaHei;fillColor=#F0FDF4;strokeColor=#16A34A;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="225" y="180" width="145" height="210" as="geometry"/>
+        </mxCell>
+        <mxCell id="cpu1c" value="普通任务 B1&lt;br&gt;&lt;b&gt;C1.prev = 5ms&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=15;fontFamily=Microsoft YaHei;fillColor=#DBEAFE;strokeColor=#3B82F6;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="237" y="230" width="121" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="cpu1a" value="线程组 A：A1+A2&lt;br&gt;&lt;b&gt;A[1].prev = 6ms&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=15;fontFamily=Microsoft YaHei;fillColor=#FFEDD5;strokeColor=#F97316;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="237" y="310" width="121" height="62" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="cpu2" value="CPU2&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#6B7280&quot;&gt;空闲&lt;/font&gt;&lt;br&gt;C2 = 0&lt;br&gt;A[2] = 0" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=17;fontStyle=1;fontFamily=Microsoft YaHei;fillColor=#FFFFFF;strokeColor=#94A3B8;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="390" y="180" width="145" height="210" as="geometry"/>
+        </mxCell>
+        <mxCell id="cpu3" value="CPU3&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#6B7280&quot;&gt;空闲&lt;/font&gt;&lt;br&gt;C3 = 0&lt;br&gt;A[3] = 0" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=17;fontStyle=1;fontFamily=Microsoft YaHei;fillColor=#FFFFFF;strokeColor=#94A3B8;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="555" y="180" width="145" height="210" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="legendc" value="蓝色：非 A 组任务，进入 CX.prev_sum" style="text;html=1;align=left;verticalAlign=middle;fontSize=14;fontFamily=Microsoft YaHei;fontColor=#2563EB;" vertex="1" parent="1">
+          <mxGeometry x="65" y="400" width="290" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="legenda" value="橙色：相关线程组 A，单独记在 A.cpu_time[X]" style="text;html=1;align=left;verticalAlign=middle;fontSize=14;fontFamily=Microsoft YaHei;fontColor=#EA580C;" vertex="1" parent="1">
+          <mxGeometry x="360" y="400" width="350" height="30" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="step2" value="② 选择 max_busy_cpu" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=18;fontStyle=1;fontFamily=Microsoft YaHei;fillColor=#F3F4F6;strokeColor=#6B7280;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="810" y="105" width="300" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="compare" value="只比较 C.prev_sum&lt;br&gt;&lt;br&gt;CPU0：1ms&lt;br&gt;&lt;b&gt;&lt;font color=&quot;#15803D&quot;&gt;CPU1：5ms ← 最大&lt;/font&gt;&lt;/b&gt;&lt;br&gt;CPU2：0ms&lt;br&gt;CPU3：0ms&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#B45309&quot;&gt;此时不比较 A[0]、A[1]&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=17;fontFamily=Microsoft YaHei;fillColor=#F0FDF4;strokeColor=#16A34A;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="810" y="180" width="300" height="250" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="arrow1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=3;endArrow=block;endFill=1;" edge="1" parent="1" source="cpu1" target="compare">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="step3" value="③ 聚合 A 组，并报告给 governor" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=18;fontStyle=1;fontFamily=Microsoft YaHei;fillColor=#F3F4F6;strokeColor=#6B7280;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="105" width="330" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="groupsum" value="集群内 A 组总需求&lt;br&gt;&lt;br&gt;&lt;b&gt;A[0] + A[1]&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#EA580C&quot;&gt;&lt;b&gt;5ms + 6ms = 11ms&lt;/b&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=19;fontFamily=Microsoft YaHei;fillColor=#FFF7ED;strokeColor=#F97316;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="180" width="330" height="145" as="geometry"/>
+        </mxCell>
+        <mxCell id="governor" value="最终上报的 CPU busy time&lt;br&gt;&lt;br&gt;CPU0 = &lt;b&gt;1ms&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#15803D&quot;&gt;&lt;b&gt;CPU1 = 5 + 11 = 16ms&lt;/b&gt;&lt;/font&gt;&lt;br&gt;CPU2 = 0ms　CPU3 = 0ms" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=19;fontFamily=Microsoft YaHei;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="360" width="330" height="155" as="geometry"/>
+        </mxCell>
+        <mxCell id="arrow2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#475569;strokeWidth=3;endArrow=block;endFill=1;" edge="1" parent="1" source="compare" target="groupsum">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="arrow3" value="全部加到 CPU1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#EA580C;strokeWidth=3;endArrow=block;endFill=1;fontSize=15;fontStyle=1;fontFamily=Microsoft YaHei;" edge="1" parent="1" source="groupsum" target="governor">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="key" value="关键：A 组原本分别在 CPU0、CPU1 上运行，但为了调频，WALT 把整个相关线程组的需求集中压到本集群最忙的 CPU 上。" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=20;fontStyle=1;fontFamily=Microsoft YaHei;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="250" y="600" width="1100" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="formula" value="选择阶段：max(C0,C1,C2,C3) = C1　　聚合阶段：C1 + ΣA = 5 + (5+6) = 16ms" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;fontFamily=Consolas;fillColor=#FFFFFF;strokeColor=#334155;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="250" y="725" width="1100" height="80" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
