@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Codex">
   <diagram id="walt-demand-aggregation" name="Page-1">
-    <mxGraphModel dx="1909" dy="454" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+    <mxGraphModel dx="2508" dy="1336" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -14,22 +14,19 @@
           <mxGeometry height="30" width="160" x="-100" y="350" as="geometry" />
         </mxCell>
         <mxCell id="1Vj5uZDWi3mdHCskuoZL-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" value="线程需要等待资源的时候主动让出，比如锁、IO、睡眠" vertex="1">
-          <mxGeometry height="60" width="150" x="240" y="510" as="geometry" />
+          <mxGeometry height="60" width="150" x="330" y="410" as="geometry" />
         </mxCell>
         <mxCell id="1Vj5uZDWi3mdHCskuoZL-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" value="高优先级抢占" vertex="1">
-          <mxGeometry height="40" width="60" x="240" y="590" as="geometry" />
+          <mxGeometry height="40" width="60" x="330" y="510" as="geometry" />
         </mxCell>
-        <mxCell id="1Vj5uZDWi3mdHCskuoZL-11" edge="1" parent="1" source="1Vj5uZDWi3mdHCskuoZL-5" style="endArrow=none;html=1;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;exitX=0.497;exitY=1.107;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="1Vj5uZDWi3mdHCskuoZL-9" value="">
+        <mxCell id="1Vj5uZDWi3mdHCskuoZL-11" edge="1" parent="1" source="1Vj5uZDWi3mdHCskuoZL-5" style="endArrow=none;html=1;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="1Vj5uZDWi3mdHCskuoZL-9" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
             <mxPoint x="240" y="510" as="sourcePoint" />
             <mxPoint x="290" y="460" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="1Vj5uZDWi3mdHCskuoZL-12" edge="1" parent="1" source="1Vj5uZDWi3mdHCskuoZL-5" style="endArrow=none;html=1;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="1Vj5uZDWi3mdHCskuoZL-10" value="">
+        <mxCell id="1Vj5uZDWi3mdHCskuoZL-12" edge="1" parent="1" source="1Vj5uZDWi3mdHCskuoZL-5" style="endArrow=none;html=1;rounded=0;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="1Vj5uZDWi3mdHCskuoZL-10" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <Array as="points">
-              <mxPoint x="180" y="610" />
-            </Array>
             <mxPoint x="240" y="510" as="sourcePoint" />
             <mxPoint x="290" y="460" as="targetPoint" />
           </mxGeometry>
