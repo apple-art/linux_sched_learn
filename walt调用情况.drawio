@@ -5,13 +5,13 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="1Vj5uZDWi3mdHCskuoZL-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;sketch=1;curveFitting=1;jiggle=2;" value="scheduler_tick&lt;div&gt;&lt;span style=&quot;font-family: &amp;quot;Architects Daughter&amp;quot;;&quot;&gt;硬件定时器上下文&lt;/span&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="30" width="60" x="160" y="340" as="geometry" />
+          <mxGeometry height="30" width="60" x="160" y="370" as="geometry" />
         </mxCell>
         <mxCell id="1Vj5uZDWi3mdHCskuoZL-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;sketch=1;curveFitting=1;jiggle=2;" value="__schedule&lt;div&gt;&lt;span style=&quot;font-family: &amp;quot;Architects Daughter&amp;quot;;&quot;&gt;进程上下文切换&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="30" width="60" x="150" y="460" as="geometry" />
         </mxCell>
         <mxCell id="1Vj5uZDWi3mdHCskuoZL-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" value="调用walt_update_task_ravg的时机" vertex="1">
-          <mxGeometry height="30" width="160" x="220" y="200" as="geometry" />
+          <mxGeometry height="30" width="160" x="200" y="160" as="geometry" />
         </mxCell>
         <mxCell id="1Vj5uZDWi3mdHCskuoZL-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" value="线程需要等待资源的时候主动让出，比如锁、IO、睡眠" vertex="1">
           <mxGeometry height="60" width="150" x="240" y="510" as="geometry" />
@@ -33,6 +33,12 @@
             <mxPoint x="240" y="510" as="sourcePoint" />
             <mxPoint x="290" y="460" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="1Vj5uZDWi3mdHCskuoZL-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" value="try_to_wake_up_local&lt;div&gt;快速唤醒&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="170" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="1Vj5uZDWi3mdHCskuoZL-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" value="walt_try_to_wake_up&lt;div&gt;从休眠中恢复唤醒&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="170" y="290" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
