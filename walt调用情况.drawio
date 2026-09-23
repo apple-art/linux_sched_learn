@@ -1,9 +1,30 @@
 <mxfile host="app.diagrams.net" agent="Codex">
   <diagram id="walt-demand-aggregation" name="Page-1">
-    <mxGraphModel dx="2054" dy="1137" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+    <mxGraphModel dx="309" dy="454" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="1Vj5uZDWi3mdHCskuoZL-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;sketch=1;curveFitting=1;jiggle=2;" value="scheduler_tick" vertex="1">
+          <mxGeometry height="30" width="60" x="170" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="1Vj5uZDWi3mdHCskuoZL-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;sketch=1;curveFitting=1;jiggle=2;" value="__schedule" vertex="1">
+          <mxGeometry height="30" width="60" x="170" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="1Vj5uZDWi3mdHCskuoZL-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" value="硬件定时器上下文" vertex="1">
+          <mxGeometry height="30" width="60" x="170" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="1Vj5uZDWi3mdHCskuoZL-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" value="进程上下文切换" vertex="1">
+          <mxGeometry height="30" width="60" x="170" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="1Vj5uZDWi3mdHCskuoZL-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" value="调用walt_update_task_ravg的时机" vertex="1">
+          <mxGeometry height="30" width="160" x="220" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="1Vj5uZDWi3mdHCskuoZL-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" value="线程需要等待资源的时候主动让出，比如锁、IO、睡眠" vertex="1">
+          <mxGeometry height="60" width="150" x="210" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="1Vj5uZDWi3mdHCskuoZL-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" value="高优先级抢占" vertex="1">
+          <mxGeometry height="30" width="60" x="210" y="660" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
