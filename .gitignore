@@ -6,3 +6,6 @@ sha256sums.asc
 
 # Full Android MSM checkout is a local reference repository; do not nest it.
 android-msm-walt-reference/
+
+# Keep the full MSM checkout local; selected kernel study paths are force-added.
+msm-4.19-linux/
