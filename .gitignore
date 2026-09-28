@@ -9,3 +9,17 @@ android-msm-walt-reference/
 
 # Keep the full MSM checkout local; selected kernel study paths are force-added.
 msm-4.19-linux/
+
+# Keep the Qualcomm 6.1 source tree local for reference.
+msm-6.1-linux/
+
+msm-6.1-linux-2/
+msm-6.1-linux.tar.gz
+
+linux-4.19.42/
+linux-4.19.42.tar.xz
+
+msm-4.19.81-r1/
+
+msm-4.19.81-full/
+msm-4.19.81-r1.tar.gz
