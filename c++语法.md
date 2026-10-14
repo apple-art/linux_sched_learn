@@ -109,3 +109,11 @@ map、set原生支持lower_bound，直接找到第一个大于等于。对于排
 lamada表达式
 
 priority_queue，支持原生的按照特定规则构造队列。
+
+```
+// 大顶堆：大的先出来
+priority_queue<int> pq;
+
+// 小顶堆：小的先出来
+priority_queue<int, vector<int>, greater<int>> pq;
+```
