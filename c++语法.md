@@ -104,7 +104,7 @@
 
 set对于pair、tuple有原始支持的自动排序
 
-map、set原生支持lower_bound，直接找到第一个大于等于。对于排序好的vector，也可以用算法库的lowerbound
+map、set原生支持lower_bound，直接找到第一个大于等于。对于排序好的vector，也可以用算法库的lowerbound。lower_bound(begin, end, tar)或者(tar)，找不到会返回end的迭代器。lower_bound是大于等于，upper_bound是大于。
 
 lamada表达式
 
