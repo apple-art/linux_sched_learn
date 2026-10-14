@@ -100,3 +100,12 @@
 | 指定位置删除 | `v.erase(pos)`         | `pos` 是迭代器 |
 | 删除区间     | `v.erase(first, last)` | 左闭右开       |
 | 清空         | `v.clear()`            | 删除所有元素   |
+
+
+set对于pair、tuple有原始支持的自动排序
+
+map、set原生支持lower_bound，直接找到第一个大于等于。对于排序好的vector，也可以用算法库的lowerbound
+
+lamada表达式
+
+priority_queue，支持原生的按照特定规则构造队列。
