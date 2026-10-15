@@ -117,3 +117,9 @@ priority_queue<int> pq;
 // 小顶堆：小的先出来
 priority_queue<int, vector<int>, greater<int>> pq;
 ```
+
+stoll的使用，特别是16进制的转换。以及转换回来。stoll("0xff11", nullptr, 0);
+
+下面这种的使用。
+std::stringstream ss;
+ss << std::hex << std::setfill('0') << std::setw(4) << a;
